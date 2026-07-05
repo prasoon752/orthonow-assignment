@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: title/description target the exact campaign intent (knee/back pain, Bengaluru, working professionals) -->
+<title>Expert Orthopaedic Opinion in Bengaluru | OrthoNow — Knee & Back Pain Specialists</title>
+<meta name="description" content="Get a same-week orthopaedic consultation in Bengaluru for knee or back pain. 9 clinics, specialist orthopaedic surgeons, evening slots for working professionals. Book in 30 seconds.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.orthonow.in/bengaluru-knee-back-pain/">
+
+<!-- Open Graph for ad/social preview consistency -->
+<meta property="og:title" content="Get an Expert Orthopaedic Opinion — OrthoNow Bengaluru">
+<meta property="og:description" content="Specialist orthopaedic consultation for knee & back pain. 9 clinics across Bengaluru, Hyderabad & Chennai.">
+<meta property="og:type" content="website">
+
+<style>
+  /* ============================================================
+     COLOR VARIABLES
+     I picked a clinical teal/navy palette to feel trustworthy for
+     a healthcare brand, and used one coral accent color only for
+     buttons/CTAs, so it's always clear what's clickable.
+     ============================================================ */
+  :root {
+    --color-bg: #F7FAF9;
+    --color-surface: #FFFFFF;
+    --color-navy: #0E2A37;
+    --color-navy-soft: #2C4A57;
+    --color-teal: #1C6E70;
+    --color-teal-light: #E4F1EF;
+    --color-coral: #E8633C;
+    --color-coral-dark: #C94F2C;
+    --color-border: #DCE6E4;
+    --color-text: #1A2B30;
+    --color-text-muted: #5C6E72;
+
+    --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --radius-card: 14px;
+    --radius-input: 10px;
+    --shadow-card: 0 6px 24px rgba(14, 42, 55, 0.08);
+    --max-width: 1180px;
+  }
+
+  /* Using local() fallback so there's no extra font file to load —
+     keeps the page fast and avoids layout shift while fonts load. */
+  @font-face {
+    font-family: 'Newsreader';
+    src: local('Newsreader');
+    font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Visually-hidden utility for accessible labels that don't need
+     to be shown on-screen (kept minimal — most labels ARE visible
+     below, per accessibility best practice for medical forms). */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Keep a visible focus outline for keyboard users — important for
+     an accessible form, so I didn't just remove the default outline. */
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--color-coral);
+    outline-offset: 2px;
+  }
+
+  /* ---------------- Header ---------------- */
+  .site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-navy);
+    letter-spacing: 0.2px;
+  }
+
+  .logo span { color: var(--color-teal); }
+
+  .header-call {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--color-navy);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--color-teal);
+    border-radius: 999px;
+  }
+
+  /* ---------------- Hero ---------------- */
+  .hero {
+    background: linear-gradient(180deg, var(--color-teal-light) 0%, var(--color-bg) 100%);
+    padding: 56px 0 64px;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    background: var(--color-teal-light);
+    border: 1px solid var(--color-teal);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.12;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 18px;
+    max-width: 14ch;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--color-teal);
+  }
+
+  .hero-subhead {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    max-width: 46ch;
+    margin-bottom: 28px;
+  }
+
+  .hero-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--color-navy-soft);
+  }
+
+  .hero-points li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: var(--color-teal);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat;
+  }
+
+  /* ---------------- Lead form card ---------------- */
+  .lead-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+    position: sticky;
+    top: 88px;
+  }
+
+  .lead-card h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--color-navy);
+    margin-bottom: 4px;
+  }
+
+  .lead-card .lead-sub {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 6px;
+  }
+
+  .field input {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 16px; /* 16px prevents iOS auto-zoom on focus */
+    padding: 13px 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-input);
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color 0.15s ease;
+  }
+
+  .field input:focus {
+    border-color: var(--color-teal);
+  }
+
+  .field .field-error {
+    display: none;
+    font-size: 12.5px;
+    color: var(--color-coral-dark);
+    margin-top: 6px;
+  }
+
+  .field.has-error input { border-color: var(--color-coral-dark); }
+  .field.has-error .field-error { display: block; }
+
+  .btn-primary {
+    width: 100%;
+    background: var(--color-coral);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-input);
+    padding: 16px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+
+  .btn-primary:hover { background: var(--color-coral-dark); }
+  .btn-primary:active { transform: scale(0.99); }
+
+  .form-microcopy {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* Thank-you state — swapped in via JS, no reload */
+  .thank-you {
+    display: none;
+    text-align: center;
+    padding: 12px 0 4px;
+  }
+
+  .thank-you.is-visible { display: block; }
+  .lead-form.is-hidden { display: none; }
+
+  .thank-you-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--color-teal-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .thank-you h2 { font-family: var(--font-display); font-size: 22px; color: var(--color-navy); margin-bottom: 8px; }
+  .thank-you p { font-size: 14.5px; color: var(--color-text-muted); }
+
+  /* ---------------- Section shared styles ---------------- */
+  section.page-section { padding: 64px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+  .section-eyebrow {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--color-teal); margin-bottom: 10px;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 34px);
+    color: var(--color-navy);
+    font-weight: 600;
+  }
+
+  /* ---------------- Trust strip ---------------- */
+  .trust-strip { background: var(--color-navy); padding: 22px 0; }
+  .trust-strip .container {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    justify-content: space-between; align-items: center;
+  }
+  .trust-stat { color: #fff; text-align: center; flex: 1; min-width: 130px; }
+  .trust-stat strong {
+    display: block; font-family: var(--font-display);
+    font-size: 26px; font-weight: 600;
+  }
+  .trust-stat span { font-size: 12.5px; color: #B9CBD0; }
+
+  /* ---------------- Doctors ---------------- */
+  .doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .doctor-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 24px;
+    text-align: center;
+  }
+  .doctor-avatar {
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    background: var(--color-teal-light);
+    margin: 0 auto 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 26px; color: var(--color-teal);
+    font-weight: 600;
+  }
+  .doctor-card h3 { font-size: 16.5px; color: var(--color-navy); margin-bottom: 4px; }
+  .doctor-card .doctor-cred { font-size: 13px; color: var(--color-teal); font-weight: 600; margin-bottom: 8px; }
+  .doctor-card p { font-size: 13.5px; color: var(--color-text-muted); }
+
+  /* ---------------- Locations ---------------- */
+  .locations-section { background: var(--color-teal-light); }
+  .city-group { margin-bottom: 28px; }
+  .city-group h3 {
+    font-family: var(--font-display);
+    font-size: 19px; color: var(--color-navy); margin-bottom: 14px;
+  }
+  .clinic-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .clinic-pill {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: var(--color-navy-soft);
+  }
+  .clinic-pill strong { display: block; color: var(--color-navy); font-size: 14.5px; margin-bottom: 3px; }
+
+  /* ---------------- Testimonials ---------------- */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testimonial-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 26px;
+  }
+  .testimonial-stars { color: var(--color-coral); font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+  .testimonial-card p { font-size: 14.5px; color: var(--color-text); margin-bottom: 16px; }
+  .testimonial-author { font-size: 13px; font-weight: 700; color: var(--color-navy); }
+  .testimonial-meta { font-size: 12px; color: var(--color-text-muted); }
+
+  /* ---------------- Why choose ---------------- */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .why-card { text-align: center; padding: 8px; }
+  .why-icon {
+    width: 52px; height: 52px;
+    margin: 0 auto 14px;
+    border-radius: 14px;
+    background: var(--color-teal-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .why-card h3 { font-size: 15.5px; color: var(--color-navy); margin-bottom: 6px; }
+  .why-card p { font-size: 13.5px; color: var(--color-text-muted); }
+
+  /* ---------------- Final CTA band ---------------- */
+  .final-cta {
+    background: var(--color-navy);
+    padding: 48px 0;
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: var(--font-display);
+    color: #fff; font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 10px;
+  }
+  .final-cta p { color: #B9CBD0; margin-bottom: 22px; font-size: 15px; }
+  .final-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-cta-light {
+    background: var(--color-coral); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 999px;
+  }
+  .btn-cta-outline {
+    border: 1.5px solid #fff; color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 999px;
+  }
+
+  /* ---------------- Footer ---------------- */
+  .site-footer { padding: 28px 0; text-align: center; }
+  .site-footer p { font-size: 12.5px; color: var(--color-text-muted); }
+
+  /* ---------------- Responsive ---------------- */
+  @media (max-width: 900px) {
+    .hero .container { grid-template-columns: 1fr; }
+    .lead-card { position: static; }
+    .doctor-grid, .testimonial-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .clinic-list { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 560px) {
+    .doctor-grid, .testimonial-grid, .why-grid, .clinic-list { grid-template-columns: 1fr; }
+    .hero { padding: 32px 0 40px; }
+    .lead-card { padding: 24px; }
+    .header-call span.call-text { display: none; }
+    .trust-strip .container { gap: 16px; }
+  }
+
+  /* Respect reduced-motion users */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     This is where the GTM container snippet would normally go
+     (right after <head>). I've left out the actual GTM-XXXXXXX ID
+     since this isn't deployed live, but I'm setting up window.dataLayer
+     here so it exists before any event push happens below.
+     ========================================================= -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+</script>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">Ortho<span>Now</span></div>
+    <a class="header-call" href="tel:+918041234567" id="headerCallBtn">
+      📞 <span class="call-text">Call Now</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============== HERO + LEAD FORM ============== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="eyebrow">For Bengaluru Working Professionals</span>
+        <h1>Don't let knee or back pain wait until it's <em>worse.</em></h1>
+        <p class="hero-subhead">
+          A focused 30-minute consultation with a specialist orthopaedic
+          surgeon — evening and weekend slots built around your work
+          schedule, at a clinic near you in Bengaluru.
+        </p>
+        <ul class="hero-points">
+          <li>Same-week appointments across 3 Bengaluru locations</li>
+          <li>15+ years experienced orthopaedic specialists, not general physicians</li>
+          <li>Evening slots (6–9 PM) for working professionals</li>
+        </ul>
+      </div>
+
+      <div class="lead-card">
+
+        <!-- LEAD FORM -->
+        <form class="lead-form" id="consultForm" novalidate>
+          <h2>Get an Expert Orthopaedic Opinion</h2>
+          <p class="lead-sub">Free callback within 2 hours. No obligation.</p>
+
+          <div class="field" id="nameField">
+            <label for="patientName">Full Name</label>
+            <input type="text" id="patientName" name="patientName" autocomplete="name" required>
+            <span class="field-error">Please enter your name</span>
+          </div>
+
+          <div class="field" id="phoneField">
+            <label for="patientPhone">Mobile Number</label>
+            <input type="tel" id="patientPhone" name="patientPhone" inputmode="numeric"
+                   autocomplete="tel" placeholder="98XXXXXXXX" required>
+            <span class="field-error">Please enter a valid 10-digit mobile number</span>
+          </div>
+
+          <button type="submit" class="btn-primary">Get My Free Consultation Call</button>
+          <p class="form-microcopy">Your number is used only to confirm your appointment.</p>
+        </form>
+
+        <!-- THANK YOU STATE (hidden by default, shown via JS after submit) -->
+        <div class="thank-you" id="thankYouState" role="status" aria-live="polite">
+          <div class="thank-you-icon">✓</div>
+          <h2>Request Received</h2>
+          <p>Our care coordinator will call you within 2 hours to confirm your slot.
+             For urgent pain, call us directly at <a href="tel:+918041234567">080-4123-4567</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST STRIP ============== -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-stat"><strong>9</strong><span>Clinics Across South India</span></div>
+      <div class="trust-stat"><strong>15+</strong><span>Years Avg. Surgeon Experience</span></div>
+      <div class="trust-stat"><strong>20,000+</strong><span>Patients Treated</span></div>
+      <div class="trust-stat"><strong>4.7★</strong><span>Average Patient Rating</span></div>
+    </div>
+  </section>
+
+  <!-- ============== DOCTOR CREDENTIALS ============== -->
+  <section class="page-section" id="doctors">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Who You'll See</div>
+        <h2>Specialist orthopaedic surgeons, not general practitioners</h2>
+      </div>
+      <div class="doctor-grid">
+        <div class="doctor-card">
+          <div class="doctor-avatar">RK</div>
+          <h3>Dr. Ravi Kulkarni</h3>
+          <div class="doctor-cred">MS Ortho, Fellowship in Sports Medicine</div>
+          <p>18 years' experience in knee preservation and sports injuries.</p>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">AM</div>
+          <h3>Dr. Anita Menon</h3>
+          <div class="doctor-cred">MS Ortho, Spine Fellowship (Singapore)</div>
+          <p>14 years' experience in non-surgical back pain management.</p>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">SP</div>
+          <h3>Dr. Suresh Patil</h3>
+          <div class="doctor-cred">MCh Ortho, Joint Replacement Specialist</div>
+          <p>20 years' experience, 3,000+ joint replacement surgeries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CLINIC LOCATIONS (9) ============== -->
+  <section class="page-section locations-section" id="locations">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Find a Clinic</div>
+        <h2>9 clinics across Bengaluru, Hyderabad & Chennai</h2>
+      </div>
+
+      <div class="city-group">
+        <h3>Bengaluru</h3>
+        <div class="clinic-list">
+          <div class="clinic-pill"><strong>Indiranagar</strong>100 Feet Road</div>
+          <div class="clinic-pill"><strong>Koramangala</strong>80 Feet Road, 4th Block</div>
+          <div class="clinic-pill"><strong>Whitefield</strong>ITPL Main Road</div>
+        </div>
+      </div>
+
+      <div class="city-group">
+        <h3>Hyderabad</h3>
+        <div class="clinic-list">
+          <div class="clinic-pill"><strong>Banjara Hills</strong>Road No. 12</div>
+          <div class="clinic-pill"><strong>Gachibowli</strong>Financial District</div>
+          <div class="clinic-pill"><strong>Kukatpally</strong>KPHB Colony</div>
+        </div>
+      </div>
+
+      <div class="city-group">
+        <h3>Chennai</h3>
+        <div class="clinic-list">
+          <div class="clinic-pill"><strong>Anna Nagar</strong>2nd Avenue</div>
+          <div class="clinic-pill"><strong>Adyar</strong>Lattice Bridge Road</div>
+          <div class="clinic-pill"><strong>Velachery</strong>100 Feet Bypass Road</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIALS ============== -->
+  <section class="page-section" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Patient Stories</div>
+        <h2>What patients in Bengaluru say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Booked an evening slot after work for my knee pain. Dr. Kulkarni explained everything clearly and I avoided surgery with the right physiotherapy plan."</p>
+          <div class="testimonial-author">Arvind Rao</div>
+          <div class="testimonial-meta">Software Engineer, Indiranagar</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Years of back pain from sitting all day at work. The Koramangala clinic team got me in within 3 days and the treatment plan actually worked."</p>
+          <div class="testimonial-author">Priya Nair</div>
+          <div class="testimonial-meta">Marketing Manager, Koramangala</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"WhatsApp confirmation was quick and the doctor was on time. No long waiting room delays like other clinics I've tried near Whitefield."</p>
+          <div class="testimonial-author">Karthik Subramaniam</div>
+          <div class="testimonial-meta">Product Manager, Whitefield</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WHY CHOOSE ============== -->
+  <section class="page-section" id="why-orthonow" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Why OrthoNow</div>
+        <h2>Built for people who can't take a day off for a doctor's visit</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🕕</div>
+          <h3>Evening &amp; Weekend Slots</h3>
+          <p>Appointments until 9 PM on weekdays and full-day Saturdays.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🩺</div>
+          <h3>Specialist-Only Consults</h3>
+          <p>Every consultation is with an MS/MCh orthopaedic specialist.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Fast Confirmation</h3>
+          <p>WhatsApp confirmation within 2 minutes of booking.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h3>Near Your Office</h3>
+          <p>9 clinics placed in IT/business corridors across 3 cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FINAL CTA ============== -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pain doesn't wait for a convenient time. Neither should your appointment.</h2>
+      <p>Get a callback within 2 hours, or call us directly right now.</p>
+      <div class="final-cta-buttons">
+        <a href="#consultForm" class="btn-cta-light" id="finalCtaScroll">Book Free Consultation</a>
+        <a href="tel:+918041234567" class="btn-cta-outline" id="finalCtaCall">Call 080-4123-4567</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 OrthoNow Healthcare Pvt. Ltd. · Bengaluru · Hyderabad · Chennai</p>
+  </div>
+</footer>
+
+<!-- ============== WHATSAPP FLOATING WIDGET ============== -->
+<a href="https://wa.me/918041234567?text=Hi%2C%20I%27d%20like%20to%20book%20an%20orthopaedic%20consultation"
+   class="whatsapp-widget" id="whatsappWidget" target="_blank" rel="noopener"
+   aria-label="Chat with us on WhatsApp"
+   style="position:fixed; bottom:20px; right:20px; width:56px; height:56px; border-radius:50%;
+          background:#25D366; display:flex; align-items:center; justify-content:center;
+          box-shadow:0 6px 16px rgba(0,0,0,0.2); z-index:60; text-decoration:none;">
+  <span style="font-size:28px; line-height:1;" aria-hidden="true">💬</span>
+</a>
+
+<script>
+/* =========================================================
+   FORM HANDLING + DATALAYER EVENTS
+   Plain JS, no libraries — keeps the page lightweight. The job
+   of this script is just to push the right data to dataLayer;
+   GTM decides what to actually do with that data (Task 1).
+   ========================================================= */
+(function () {
+  "use strict";
+
+  var form = document.getElementById("consultForm");
+  var thankYou = document.getElementById("thankYouState");
+  var nameInput = document.getElementById("patientName");
+  var phoneInput = document.getElementById("patientPhone");
+  var nameField = document.getElementById("nameField");
+  var phoneField = document.getElementById("phoneField");
+
+  // Basic validation: checks for a 10-digit Indian mobile number
+  // starting with 6-9. Kept fairly strict so junk/test numbers
+  // don't end up in the CRM (see Task 3).
+  function isValidName(value) {
+    return value.trim().length >= 2;
+  }
+
+  function isValidPhone(value) {
+    return /^[6-9]\d{9}$/.test(value.trim());
+  }
+
+  function setFieldError(fieldEl, hasError) {
+    fieldEl.classList.toggle("has-error", hasError);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // SPA-style submit, never reload the landing page
+
+    var nameOk = isValidName(nameInput.value);
+    var phoneOk = isValidPhone(phoneInput.value);
+
+    setFieldError(nameField, !nameOk);
+    setFieldError(phoneField, !phoneOk);
+
+    if (!nameOk || !phoneOk) {
+      return; // stop here — do not fire a conversion event for invalid submits
+    }
+
+    // This is where the form data would actually be POSTed to the
+    // backend (Task 3) in a real deployment. I'm simulating a
+    // successful response here since this is the frontend piece of
+    // the assignment — the dataLayer push below still matches the
+    // booking_success event shape from Task 1.
+    submitLead({
+      name: nameInput.value.trim(),
+      phone: phoneInput.value.trim()
+    });
+  });
+
+  function submitLead(lead) {
+    // 1. Push the conversion event GTM is listening for.
+    window.dataLayer.push({
+      event: "consultation_form_submitted",
+      lead_source: "Google Ads",
+      form_name: "Consultation Landing Page",
+      clinic_location: "Bengaluru" // page is geo-specific to the Bengaluru campaign
+    });
+
+    // 2. Swap UI to the Thank You state without a page reload.
+    form.classList.add("is-hidden");
+    thankYou.classList.add("is-visible");
+
+    // Move focus to the confirmation for screen-reader users —
+    // aria-live="status" alone isn't reliable across all readers.
+    thankYou.setAttribute("tabindex", "-1");
+    thankYou.focus();
+  }
+
+  // ---- Micro-conversion tracking: Call Now click ----
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+    el.addEventListener("click", function () {
+      window.dataLayer.push({
+        event: "call_now_click",
+        clinic_location: "Bengaluru",
+        phone_number_dialed: el.getAttribute("href").replace("tel:", ""),
+        page_path: window.location.pathname
+      });
+    });
+  });
+
+  // ---- Micro-conversion tracking: WhatsApp widget click ----
+  document.getElementById("whatsappWidget").addEventListener("click", function () {
+    window.dataLayer.push({
+      event: "whatsapp_click",
+      clinic_location: "Bengaluru",
+      page_path: window.location.pathname,
+      widget_position: "floating"
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
